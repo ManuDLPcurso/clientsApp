@@ -27,6 +27,10 @@ export class NewClientPage implements OnInit {
   }
 
   async save(){
+    if(!this.client.email.includes("@")){
+      alert("Debes introducir un correo electronico válido.");
+      return;
+    }
     await this.service.addClient(this.client);
     this.router.navigate(['/clients']);
   }

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>clients</ion-title>
+    <ion-title>Lista de clientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -35,10 +35,8 @@
             [routerLink]="['/edit-client',c.id]" class="btn btn-warning">
             Editar
           </a>
-          -
-          
-            <button class="btn btn-danger" (click)="deleteClient()">Eliminar</button>
-            Eliminar
+            -
+          <button class="btn btn-danger" (click)="removeClient(c.id)">Eliminar</button>
           
         </td>
       </tr>

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { RouterLink,ActivatedRoute, Router } from '@angular/router';
-import { ClientsService } from 'src/app/services/clients.service';
-import { ClientInterface } from 'src/app/interfaces/client.interface';
+import { ClientsService } from './../../services/clients.service';
+import { ClientInterface } from './../../interfaces/client.interface';
 
 
 @Component({

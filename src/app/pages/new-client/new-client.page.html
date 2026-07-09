@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>new-client</ion-title>
+    <ion-title>Crear cliente</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,22 +12,31 @@
   </ion-header>
 
   <div class="container mt-4">
+
+    <a routerLink="/clients" class="btn btn-primary mb-3"> Volver a CLIENTES </a>
+
     <h1>Nuevo Cliente</h1>
+
     <input
       class="form-control mb-2"
       [(ngModel)]="client.name"
       placeholder="Nombre"
     />
     <input
+      type="email"
       class="form-control mb-2"
       [(ngModel)]="client.email"
       placeholder="Email"
+      #email="ngModel"
+      required
     />
     <input
       class="form-control mb-2"
       [(ngModel)]="client.phone"
       placeholder="Teléfono"
     />
+
     <button class="btn btn-success" (click)="save()">Guardar</button>
+
   </div>
 </ion-content>
