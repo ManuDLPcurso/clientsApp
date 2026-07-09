@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
 import { ClientsService } from './../../services/clients.service';
 import { RouterLink } from '@angular/router';
-import { EditClientPage} from './../edit-client/edit-client.page'
+import { EditClientPage} from '../edit-client/edit-client.page'
 
 @Component({
   selector: 'app-clients',
