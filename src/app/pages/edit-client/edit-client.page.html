@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>edit-client</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">edit-client</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<p>El id es {{id}}</p>
+
+  <div class="container mt-4">
+    <h1>Editar cliente</h1>
+    <input
+      class="form-control mb-2"
+      [(ngModel)]="client.name"
+      placeholder="Nombre"
+    />
+    <input
+      class="form-control mb-2"
+      [(ngModel)]="client.email"
+      placeholder="Email"
+    />
+    <input
+      class="form-control mb-2"
+      [(ngModel)]="client.phone"
+      placeholder="Teléfono"
+    />
+    <button class="btn btn-success" (click)="saveClient()">Actualizar</button>
+    -
+    <button class="btn btn-danger" (click)="deleteClient()">Eliminar</button>
+
+
+
+  </div>
+
+</ion-content>
