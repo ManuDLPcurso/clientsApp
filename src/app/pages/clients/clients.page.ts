@@ -27,15 +27,10 @@ export class ClientsPage implements OnInit {
     this.clients = await this.service.getClients();
   }
 
-  
-    async loadClients() {
-    this.clients = await this.service.getClients();
-  }
-
   async removeClient(id: number) {
     if (confirm('¿Estás seguro que quieres eliminar este cliente?')) {
       await this.service.deleteClient(id);
-      await this.loadClients();
+      await this.service.getClients();
     }
   }
   

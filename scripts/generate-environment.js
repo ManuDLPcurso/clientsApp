@@ -17,5 +17,3 @@ fs.writeFileSync(
   "src/app/environments/environment.prod.ts",
   content
 );
-
-console.log("✅ environment.prod.ts generado");

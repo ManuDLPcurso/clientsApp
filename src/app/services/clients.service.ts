@@ -53,7 +53,7 @@ export class ClientsService {
       throw error;  
   }
 
-    async deleteClient(id:number){
+  async deleteClient(id:number){
     const {error} = await supabase
       .from("clients")
       .delete()
