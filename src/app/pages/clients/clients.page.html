@@ -13,10 +13,14 @@
 
   <div class="container mt-4">
 
+    
+    <a routerLink="/login" class="btn btn-primary mb-3"> Login </a>
+    <div><button class="btn btn-danger" (click)="desconectar()">Logout</button></div>
+
     <h1>Clientes</h1>
 
-    <a routerLink="/new-client" class="btn btn-primary mb-3"> Nuevo Cliente </a>
-
+    <a routerLink="/new-client" class="btn btn-success"> Nuevo Cliente </a>
+    <br><br>
     <table class="table table-bordered">
       <tr>
         <th>ID</th>

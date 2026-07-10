@@ -5,6 +5,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
 import { ClientsService } from './../../services/clients.service';
 import { RouterLink } from '@angular/router';
 import { EditClientPage} from '../edit-client/edit-client.page'
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-clients',
@@ -17,7 +18,7 @@ export class ClientsPage implements OnInit {
 
   clients:any[]=[];
 
-  constructor(private service:ClientsService) {
+  constructor(private service:ClientsService,private auth:AuthService) {
   }
 
   ngOnInit() {
@@ -34,6 +35,10 @@ export class ClientsPage implements OnInit {
     }
   }
   
+    async desconectar(){
+    await this.auth.logout()
+    alert("Sesion cerrada");
+  }
 
   
 
